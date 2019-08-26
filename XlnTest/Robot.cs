@@ -21,20 +21,20 @@ namespace XlnTest
             _inputReader = inputReader;
         }
 
-        double mod(double a, double b)  // We will need true modulo function
+        private double Mod(double a, double b)  // We will need true modulo function
         {
             return a - b * Math.Floor(a / b);
         }
 
-        public void moveRobot(char[] movementString )
+        public void MoveRobot(char[] instructions)
         {
             
-            foreach (char arrow in movementString)
+            foreach (char arrow in instructions)
             {
                 // first check for a turn
                 var turn = _inputReader.ReadDirection(arrow);
                 Direction += turn;
-                Direction = Convert.ToInt32(mod(Convert.ToDouble(Direction),4));
+                Direction = Convert.ToInt32(Mod(Convert.ToDouble(Direction),4));
                 // If no turn move forward
                 if (turn == 0)
                 {

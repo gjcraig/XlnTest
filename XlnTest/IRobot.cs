@@ -8,6 +8,6 @@
         int Y { get; set; }
         int YMax { get; set; }
 
-        void moveRobot(char[] movementString);
+        void MoveRobot(char[] instructions);
     }
 }

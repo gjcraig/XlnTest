@@ -64,8 +64,8 @@ namespace XlnTest
             robot2.Y = robotStart2[1];
             robot2.Direction = robotStart2[2];
 
-            robot1.moveRobot(movementInput1);
-            robot2.moveRobot(movementInput2);
+            robot1.MoveRobot(movementInput1);
+            robot2.MoveRobot(movementInput2);
             Console.WriteLine("{0} {1} {2}", robot1.X, robot1.Y, compass[robot1.Direction]);
             Console.WriteLine("{0} {1} {2}", robot2.X, robot2.Y, compass[robot2.Direction]);
         }
